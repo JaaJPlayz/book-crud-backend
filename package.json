@@ -17,7 +17,12 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "docker:up": "docker-compose up -d --build",
+    "docker:down": "docker-compose down",
+    "docker:clean": "docker system prune -af",
+    "docker:restart": "docker-compose restart",
+    "docker:logs": "docker logs -n 10 -f nestjs-backend"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
