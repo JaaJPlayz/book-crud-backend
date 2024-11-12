@@ -1,1 +1,51 @@
-GET localhost:3000
+### Get Hello World
+GET http://localhost:3000 HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Get All Books
+GET http://localhost:3000/book HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Get Book by ID
+GET http://localhost:3000/book/1 HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Create Book
+POST http://localhost:3000/book HTTP/1.1
+Content-Type: application/json
+
+{
+  "author": "sample string original",
+  "title": "sample string nahh",
+  "description": "lorem ipsum dolor sit amet",
+  "price": 3213,
+  "count": 212
+}
+
+###
+
+### Update Book
+PUT http://localhost:3000/book/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "author": "sample string",
+  "title": "sample string two",
+  "description": "lorem ipsum",
+  "price": 990,
+  "count": 210
+}
+
+###
+
+### Delete Book
+DELETE http://localhost:3000/book/2 HTTP/1.1
+Content-Type: application/json
+
+###
